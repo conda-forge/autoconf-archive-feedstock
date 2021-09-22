@@ -27,6 +27,7 @@ about:
   home: https://savannah.gnu.org/projects/autoconf-archive/
   license: GPL-3.0
   license_family: GPL
+  license_file: COPYING
   summary: Collection of over 500 reusable autoconf macros
 
 extra:
