@@ -10,7 +10,7 @@ source:
   sha256: e8a6eb9d28ddcba8ffef3fa211653239e9bf239aba6a01a6b7cfc7ceaec69cbd
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win]
 
 requirements:
@@ -22,7 +22,8 @@ requirements:
 
 test:
   commands:
-    - test -d ${PREFIX}/share/autoconf-archive
+    - test -d ${PREFIX}/share/aclocal
+    - test -f ${PREFIX}/share/aclocal/ax_pthread.m4
 
 about:
   home: https://savannah.gnu.org/projects/autoconf-archive/
