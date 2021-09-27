@@ -1,5 +1,5 @@
 {% set name = "autoconf-archive" %}
-{% set version = "2018.03.13" %}
+{% set version = "2021.02.19" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://ftp.gnu.org/gnu/autoconf-archive/{{ name }}-{{ version }}.tar.xz
-  sha256: 6175f90d9fa64c4d939bdbb3e8511ae0ee2134863a2c7bf8d9733819efa6e159
+  sha256: e8a6eb9d28ddcba8ffef3fa211653239e9bf239aba6a01a6b7cfc7ceaec69cbd
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win]
 
 requirements:
@@ -22,7 +22,8 @@ requirements:
 
 test:
   commands:
-    - test -d ${PREFIX}/share/autoconf-archive
+    - test -d ${PREFIX}/share/aclocal
+    - test -f ${PREFIX}/share/aclocal/ax_pthread.m4
 
 about:
   home: https://savannah.gnu.org/projects/autoconf-archive/
